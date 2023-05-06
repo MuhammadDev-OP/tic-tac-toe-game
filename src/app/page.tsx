@@ -2,7 +2,11 @@
 
 import Image from "next/image";
 
-function Square({value}) {
+interface SquareType {
+  value: string | number | any;
+}
+
+function Square({value} : SquareType) {
 
   function handleClick() {
     console.log('Clicked')
