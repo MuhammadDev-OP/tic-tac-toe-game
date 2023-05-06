@@ -13,17 +13,24 @@ export default function Home() {
         </h1>
       </div>
       <div className="ml-5 mt-5">
+      <div className="table-row-group">
         <Square />
         <Square />
         <Square />
+        </div>
+        <div className="table-row-group">
+
         <Square />
         <Square />
         <Square />
+        </div>
+        <div className="table-row-group">
+
         <Square />
         <Square />
         <Square />
-        
-      </div>
+        </div>
+        </div>
     </>
   );
 }
