@@ -1,19 +1,18 @@
 'use client';
 
 import Image from "next/image";
+import { useState } from "react";
 
 interface SquareType {
   value: string | number | any;
 }
 
-function Square({value} : SquareType) {
+function Square() {
 
-  function handleClick() {
-    console.log('Clicked')
-  }
+  const [squares, setSquares] = useState(Array(9).fill(null));
 
   return (
-     <button onClick={handleClick} className="square">{value}</button>
+     <button  className="square">{squares}</button>
 
   )
 }
@@ -28,21 +27,21 @@ export default function Home() {
       </div>
       <div className="ml-5 mt-5">
       <div className="table-row-group">
-        <Square value="1" />
-        <Square value="2" />
-        <Square value="3" />
+        <Square />
+        <Square />
+        <Square />
         </div>
         <div className="table-row-group">
 
-        <Square value="4" />
-        <Square value="5" />
-        <Square value="6" />
+        <Square />
+        <Square />
+        <Square />
         </div>
         <div className="table-row-group">
 
-        <Square value="7" />
-        <Square value="8" />
-        <Square value="9" />
+        <Square />
+        <Square />
+        <Square />
         </div>
       </div>
     </>
