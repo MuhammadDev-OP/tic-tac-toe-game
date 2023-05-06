@@ -1,31 +1,29 @@
-import Image from 'next/image'
+import Image from "next/image";
+
+export function Square() {
+  return <button className="square">1</button>;
+}
 
 export default function Home() {
   return (
     <>
-    <div className='text-center mt-44 bg-stone-900 '> 
-      <h1 className='animate-pulse font-bold text-5xl text-yellow-500 p-10 hover:scale-150'>
-        USTAAD IDHAR KIDHAR
-      </h1>
-    </div>
-    <div className='ml-5 mt-5'>
-    <div className='table-row-group'>
-      <button className='square'>1</button>
-      <button className='square'>2</button>
-      <button className='square'>3</button>
+      <div className="text-center mt-44 bg-stone-200 ">
+        <h1 className="animate-pulse font-bold text-5xl text-cyan-500 p-10 hover:scale-150">
+          Phir Se Khelo!
+        </h1>
       </div>
-      <div className='table-row-group'>
-      <button className='square'>4</button>
-      <button className='square'>5</button>
-      <button className='square'>6</button>
+      <div className="ml-5 mt-5">
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        <Square />
+        
       </div>
-      <div className='table-row-group'>
-      <button className='square'>7</button>
-      <button className='square'>8</button>
-      <button className='square'>9</button>
-      </div>
-    </div>
-
     </>
-  )
+  );
 }
