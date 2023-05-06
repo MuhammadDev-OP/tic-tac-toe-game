@@ -3,7 +3,15 @@
 import Image from "next/image";
 
 function Square({value}) {
-  return <button className="square">{value}</button>;
+
+  function handleClick() {
+    console.log('Clicked')
+  }
+
+  return (
+     <button onClick={handleClick} className="square">{value}</button>
+
+  )
 }
 
 export default function Home() {
@@ -32,7 +40,7 @@ export default function Home() {
         <Square value="8" />
         <Square value="9" />
         </div>
-        </div>
+      </div>
     </>
   );
 }
