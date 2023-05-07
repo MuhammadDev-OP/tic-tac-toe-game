@@ -21,3 +21,13 @@
     height: 40px;
     margin-right: -1;
   }
+
+.status {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: x-large;
+    color: slategrey;
+}
