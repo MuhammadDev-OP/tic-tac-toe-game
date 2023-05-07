@@ -19,13 +19,23 @@ function Square({value, onSquareClick} : SquareType) {
 // type Square = string | null;
 
 export default function Home() {
+  const [xIsNext, setxIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i : any) {
       const NextSquares : String | Number | any = squares.slice();
-      NextSquares[i] = "X";
+      if(xIsNext) {
+        NextSquares[i] = "X";
+
+      } else {
+        NextSquares[i] = "O";
+      }
+
       setSquares(NextSquares);
-  }
+      setxIsNext(!xIsNext)
+    }
+
+
 
 
   return (
