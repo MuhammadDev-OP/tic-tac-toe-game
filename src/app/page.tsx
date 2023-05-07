@@ -23,6 +23,9 @@ export default function Home() {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i : any) {
+    if(squares[i]) {
+      return;
+    }
       const NextSquares : String | Number | any = squares.slice();
       if(xIsNext) {
         NextSquares[i] = "X";
