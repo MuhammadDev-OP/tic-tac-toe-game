@@ -5,13 +5,13 @@ import { useState } from "react";
 
 interface SquareType {
   value: string | number | any;
+  onSquareClick: string | number | any;
 }
 
-function Square({value} : SquareType) {
-
- 
+function Square({value, onSquareClick} : SquareType) {
+    
   return (
-     <button  className="square">{value}</button>
+     <button  className="square" onClick={onSquareClick}>{value}</button>
 
   )
 }
@@ -21,8 +21,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="text-center mt-44 bg-stone-200 ">
-        <h1 className="animate-pulse font-bold text-5xl text-cyan-500 p-10 hover:scale-150">
+      <div className="text-center mt-44 bg-yellow-600 ">
+        <h1 className="animate-pulse font-bold text-5xl text-cyan-800 p-10 hover:scale-150">
           Phir Se Khelo!
         </h1>
       </div>
