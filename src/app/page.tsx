@@ -81,7 +81,9 @@ function Home({ xIsNext, squares, onPlay }: HomeType) {
           Phir Se Khelo!
         </h1>
       </div>
-      <div className="status">{status}</div>
+      <div className="status">
+        {status}
+      </div>
       <div className="ml-5 mt-5">
         <div className="table-row-group">
           <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -120,12 +122,12 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = 'Go to move #' + move;
+      description = "Go to move #" + move;
     } else {
-      description = 'Go to game start';
+      description = "Go to game start";
     }
     return (
-      <li>
+      <li key={move}>
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
